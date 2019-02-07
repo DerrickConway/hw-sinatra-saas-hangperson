@@ -1,3 +1,5 @@
+<% if @game.check_win_or_lose == :lose %>
+
 <h1>Sorry, you lose!</h1>
 
 <div class="alert alert-danger">
@@ -7,4 +9,10 @@
 
 <%= erb :new %>
 
+<% else %>
+ <!-- if he didn't redirect him to the previous state    -->
 
+<%= erb :show %>
+
+
+<% end %>

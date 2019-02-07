@@ -1,3 +1,4 @@
+<h2>Guess a letter</h2>
 <% if flash[:message] %>
    <div class="alert alert-danger">
      <%= flash[:message] %>  
@@ -5,9 +6,8 @@
 <% end %>
 
 <div class="alert alert-warning">
-  <p class="lead">
-    Wrong Guesses:
-    <%= @game.wrong_guesses %>
+  <p>Wrong Guesses:
+  <span class="guesses"><%=flash[:wrong_guesses] %></span>
   </p>
 </div>
 
